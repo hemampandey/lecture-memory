@@ -8,7 +8,15 @@ Metrics:
 """
 
 import json
+import sys
+from pathlib import Path
+
+# Add project root to path
+sys.path.append(str(Path(__file__).parent.parent))
+
 from retrieval.retriever import TemporalRetriever, RetrievalConfig
+from config import config
+from logger import logger
 from retrieval.contradiction import check_contradiction
 
 retriever = TemporalRetriever()
