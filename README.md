@@ -1,6 +1,10 @@
 # 🎓 Lecture Memory
 
-**Lecture Memory** is an advanced RAG (Retrieval-Augmented Generation) system designed for students to manage high-volume video lectures. It doesn't just search; it tracks how concepts evolve over a semester and detects when a professor contradicts a previous lecture.
+**Lecture Memory** is an advanced RAG (Retrieval-Augmented Generation) system designed for students to manage high-volume video lectures. It doesn't just search; it tracks how concepts evolve over and detects if topic contradicts a previous lecture.
+
+---
+
+<img width="1190" height="394" alt="Screenshot 2026-05-11 at 2 36 17 AM" src="https://github.com/user-attachments/assets/0a5a5a72-e31d-4c04-bd62-b89ac758fe63" />
 
 ---
 
