@@ -6,10 +6,10 @@
 
 ## 🚀 Key Features
 
-- **🎬 Multi-Source Ingestion**: Direct YouTube ingestion with auto-cleanup of local assets.
-- **🎙️ Fast Transcription**: Optimized for Mac GPU (MPS) acceleration using OpenAI Whisper.
-- **🤖 Agentic Workflow**: Orchestrated by **LangGraph** for modular retrieval and synthesis.
-- **🧠 Temporal RAG**: Specialized retrieval that understands chronological sequence.
+- **🎬 Source Ingestion**: Direct YouTube ingestion with auto-cleanup of local assets.
+- **🎙️ Fast Transcription**: Transcription of lectures using `OpenAI Whisper`.
+- **🤖 Agentic Workflow**: Used **LangGraph** for modular retrieval and synthesis.
+- **🧠 Temporal RAG**: Retrieval that understands chronological sequence.
 - **⚠️ Contradiction Detection**: Cross-references early lectures with later ones to find conflicting claims or evolved definitions.
 - **⏳ Concept Timeline**: Visualizes how a single topic was introduced, expanded, and summarized across the entire course.
 
@@ -17,11 +17,11 @@
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: Streamlit with custom CSS (Glassmorphism design)
+- **Frontend**: Streamlit
 - **Vector DB**: Qdrant (Local Docker)
-- **Embeddings**: `sentence-transformers` (all-MiniLM-L6-v2)
 - **Transcription**: OpenAI Whisper (`tiny` model for speed)
-- **LLM**: GPT-4o-mini (via GitHub Models API for free access)
+- **Embeddings**: `sentence-transformers` (all-MiniLM-L6-v2)
+- **LLM**: GPT-4o-mini (via GitHub Models API)
 
 ---
 
@@ -33,8 +33,7 @@ Most RAG systems just find the most similar text. But in a course, a definition 
 ### 2. GPU Acceleration on Apple Silicon
 Local transcription was originally too slow. I refactored the pipeline to use PyTorch's `mps` device, enabling hardware acceleration on my Mac's M-series chip, reducing transcription time by ~70%.
 
-### 3. API Cost Optimization
-By default, LLMs are used for everything. To make this project accessible, I implemented a `--no-llm-topics` mode for ingestion and integrated **GitHub Models** to provide a free tier for the RAG component.
+
 
 ---
 
