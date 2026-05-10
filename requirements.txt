@@ -1,0 +1,27 @@
+# Core
+fastapi
+uvicorn
+streamlit
+python-dotenv
+
+# Transcription
+openai-whisper
+yt-dlp          # download YouTube lectures
+
+# Embeddings
+sentence-transformers
+
+# Vector DB
+qdrant-client
+
+# LLM
+openai
+
+# Storage
+sqlalchemy
+aiosqlite
+
+# Utilities
+pydantic
+tqdm
+numpy

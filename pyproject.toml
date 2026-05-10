@@ -1,0 +1,16 @@
+[project]
+name = "lecture-memory"
+version = "0.1.0"
+description = "A temporal-aware RAG system that tracks how concepts evolve across lecture sessions, with contradiction detection and timestamp-linked citations."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "openai>=2.36.0",
+    "python-dotenv>=1.2.2",
+    "qdrant-client>=1.17.1",
+    "sentence-transformers>=5.4.1",
+    "streamlit>=1.57.0",
+    "openai-whisper",
+    "yt-dlp>=2026.3.17",
+    "langgraph>=1.1.10",
+]
