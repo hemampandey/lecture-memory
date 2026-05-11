@@ -2,7 +2,6 @@ from qdrant_client import QdrantClient
 from qdrant_client.models import Filter, FieldCondition, Range, MatchValue, MatchAny
 from sentence_transformers import SentenceTransformer
 from models import SourceCitation
-from ingestion.embed import get_qdrant_client, get_embedder
 from config import config
 from dataclasses import dataclass
 from typing import Optional
@@ -21,8 +20,9 @@ class RetrievalConfig:
 
 class TemporalRetriever:
     def __init__(self):
-        self.client: QdrantClient = get_qdrant_client()
-        self.embedder: SentenceTransformer = get_embedder()
+        from ingestion.embed import get_qdrant_client, get_embedder
+        self.client = get_qdrant_client()
+        self.embedder = get_embedder()
 
     def _build_filter(self, config: RetrievalConfig) -> Optional[Filter]:
         """Build Qdrant filter from config. None = no filter."""
