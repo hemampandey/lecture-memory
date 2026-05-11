@@ -15,11 +15,10 @@ COLLECTION = config.COLLECTION_NAME
 EMBEDDING_MODEL = config.EMBEDDING_MODEL
 VECTOR_SIZE = 384
 
-def get_qdrant_client() -> QdrantClient:
-    return QdrantClient(
-        host=config.QDRANT_HOST,
-        port=config.QDRANT_PORT,
-    )
+def get_client():
+    if config.QDRANT_URL:
+        return QdrantClient(url=config.QDRANT_URL, api_key=config.QDRANT_API_KEY)
+    return QdrantClient(host=config.QDRANT_HOST, port=config.QDRANT_PORT)
 
 def get_embedder() -> SentenceTransformer:
     return SentenceTransformer(EMBEDDING_MODEL)
@@ -39,7 +38,7 @@ def embed_and_upload(chunks: list[LectureChunk], batch_size: int = 32):
     Embed chunks and upload to Qdrant with full metadata payload.
     The payload is what powers temporal + topic filtering later.
     """
-    client = get_qdrant_client()
+    client = get_client()
     embedder = get_embedder()
     ensure_collection(client)
 
