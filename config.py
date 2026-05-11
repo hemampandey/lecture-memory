@@ -1,7 +1,6 @@
 import os
 from dotenv import load_dotenv
 from pathlib import Path
-from typing import Optional
 
 load_dotenv()
 
@@ -20,10 +19,8 @@ class Config:
     LLM_MODEL = "gpt-4o-mini"
     
     # --- Qdrant Settings ---
-    QDRANT_HOST: str = os.getenv("QDRANT_HOST", "localhost")
-    QDRANT_PORT: int = int(os.getenv("QDRANT_PORT", 6333))
-    QDRANT_URL: Optional[str] = os.getenv("QDRANT_URL")  # Use this for Qdrant Cloud
-    QDRANT_API_KEY: Optional[str] = os.getenv("QDRANT_API_KEY")
+    QDRANT_HOST = os.getenv("QDRANT_HOST", "localhost")
+    QDRANT_PORT = int(os.getenv("QDRANT_PORT", 6333))
     COLLECTION_NAME = "lecture_memory"
 
     # --- API Settings ---

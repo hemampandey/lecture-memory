@@ -15,14 +15,9 @@ def check_system():
     
     # 1. Check Qdrant
     try:
-        if config.QDRANT_URL:
-            client = QdrantClient(url=config.QDRANT_URL, api_key=config.QDRANT_API_KEY)
-            logger.info(f"✅ Qdrant Cloud: {config.QDRANT_URL}")
-        else:
-            client = QdrantClient(host=config.QDRANT_HOST, port=config.QDRANT_PORT)
-            logger.info(f"✅ Qdrant Local: {config.QDRANT_HOST}:{config.QDRANT_PORT}")
-        
+        client = QdrantClient(host=config.QDRANT_HOST, port=config.QDRANT_PORT)
         client.get_collections()
+        logger.info("✅ Qdrant Connection: SUCCESS")
     except Exception as e:
         logger.error(f"❌ Qdrant Connection: FAILED. Ensure Docker is running. Error: {e}")
 

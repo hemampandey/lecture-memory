@@ -21,16 +21,8 @@ class RetrievalConfig:
 
 class TemporalRetriever:
     def __init__(self):
-        # Use Cloud URL if available, otherwise fallback to local host/port
-        if config.QDRANT_URL:
-            self.client = QdrantClient(
-                url=config.QDRANT_URL, 
-                api_key=config.QDRANT_API_KEY
-            )
-        else:
-            self.client = QdrantClient(host=config.QDRANT_HOST, port=config.QDRANT_PORT)
-        
-        self.model = SentenceTransformer(config.EMBEDDING_MODEL)
+        self.client: QdrantClient = get_qdrant_client()
+        self.embedder: SentenceTransformer = get_embedder()
 
     def _build_filter(self, config: RetrievalConfig) -> Optional[Filter]:
         """Build Qdrant filter from config. None = no filter."""
