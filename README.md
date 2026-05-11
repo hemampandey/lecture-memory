@@ -19,6 +19,31 @@
 
 ---
 
+## Evaluation
+<img width="1000" height="300" alt="Screenshot 2026-05-11 at 1 55 32 AM" src="https://github.com/user-attachments/assets/36b8f10f-0c9d-493e-8c2a-4d01b6731b7f" />
+
+---
+
+## Screenshots
+
+### Ingestion
+
+<img width="1000" height="400" alt="Screenshot 2026-05-10 at 5 11 05 PM" src="https://github.com/user-attachments/assets/ae2b1e13-f704-49f3-9959-143e4f8f584a" />
+
+### Result
+
+<img width="1400" height="750" alt="Screenshot 2026-05-10 at 5 10 51 PM" src="https://github.com/user-attachments/assets/dc421d8d-e8ca-4761-8d61-30a3b142f99c" />
+
+<img width="1105" height="733" alt="Screenshot 2026-05-10 at 3 31 08 PM" src="https://github.com/user-attachments/assets/6044fa9a-76cc-4762-8995-71f927242d69" />
+
+### Conept Timeline
+
+<img width="297" height="245" alt="Screenshot 2026-05-10 at 3 31 59 PM" src="https://github.com/user-attachments/assets/c889f196-22b0-4e27-9437-e02dd4f72954" />
+
+<img width="1127" height="752" alt="Screenshot 2026-05-10 at 3 32 08 PM" src="https://github.com/user-attachments/assets/8cae4d0d-3e92-46c5-87fa-fcf91d13315b" />
+
+---
+
 ## 🛠️ Tech Stack
 
 - **Frontend**: Streamlit
