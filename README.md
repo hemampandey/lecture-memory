@@ -50,7 +50,7 @@
 - **Vector DB**: Qdrant (Local Docker)
 - **Transcription**: OpenAI Whisper (`tiny` model for speed)
 - **Embeddings**: `sentence-transformers` (all-MiniLM-L6-v2)
-- **LLM**: GPT-4o-mini (via GitHub Models API)
+- **LLM**: GPT-4o-mini
 
 ---
 
