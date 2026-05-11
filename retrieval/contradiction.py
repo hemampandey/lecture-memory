@@ -10,7 +10,6 @@ client = OpenAI(
     api_key=config.OPENAI_API_KEY,
     base_url=config.OPENAI_BASE_URL
 )
-retriever = TemporalRetriever()
 
 
 CONTRADICTION_PROMPT = """You are analyzing lecture excerpts on the same topic from different sessions.
@@ -39,6 +38,7 @@ Excerpt B (Session {session_b}, {timestamp_b}):
 
 def check_contradiction(query: str) -> dict:
     """Retrieves temporally diverse chunks and checks for contradictions."""
+    retriever = TemporalRetriever()
     chunks = retriever.retrieve_for_contradiction(query, top_k=6)
 
     if len(chunks) < 2:
