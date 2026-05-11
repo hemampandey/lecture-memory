@@ -20,7 +20,9 @@ class Config:
     
     # --- Qdrant Settings ---
     QDRANT_HOST = os.getenv("QDRANT_HOST", "localhost")
-    QDRANT_PORT = int(os.getenv("QDRANT_PORT", 6333))
+    QDRANT_PORT = os.getenv("QDRANT_PORT", "6333")
+    QDRANT_URL = os.getenv("QDRANT_URL")  # Full URL for Cloud (e.g. https://xyz.qdrant.io)
+    QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
     COLLECTION_NAME = "lecture_memory"
 
     # --- API Settings ---

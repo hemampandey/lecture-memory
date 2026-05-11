@@ -1,15 +1,17 @@
 # Core
-fastapi
-uvicorn
 streamlit
 python-dotenv
+pydantic
+langgraph
 
 # Transcription
 openai-whisper
-yt-dlp          # download YouTube lectures
+yt-dlp
 
-# Embeddings
+# ML & Embeddings
+torch
 sentence-transformers
+numpy
 
 # Vector DB
 qdrant-client
@@ -17,11 +19,5 @@ qdrant-client
 # LLM
 openai
 
-# Storage
-sqlalchemy
-aiosqlite
-
 # Utilities
-pydantic
 tqdm
-numpy

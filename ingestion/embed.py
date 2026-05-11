@@ -16,9 +16,15 @@ EMBEDDING_MODEL = config.EMBEDDING_MODEL
 VECTOR_SIZE = 384
 
 def get_qdrant_client() -> QdrantClient:
+    """Returns a client for either local or cloud Qdrant."""
+    if config.QDRANT_URL:
+        return QdrantClient(
+            url=config.QDRANT_URL,
+            api_key=config.QDRANT_API_KEY,
+        )
     return QdrantClient(
         host=config.QDRANT_HOST,
-        port=config.QDRANT_PORT,
+        port=int(config.QDRANT_PORT),
     )
 
 def get_embedder() -> SentenceTransformer:
